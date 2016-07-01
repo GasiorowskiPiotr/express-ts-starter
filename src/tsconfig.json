@@ -1,0 +1,14 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+        "module": "commonjs",
+        "noImplicitAny": false,
+        "noImplicitReturns": true,
+        "noEmitOnError": true,
+        "outDir": "dist",
+        "sourceMap": true
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}

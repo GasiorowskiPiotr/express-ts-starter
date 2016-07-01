@@ -1,0 +1,25 @@
+{
+  "name": "src",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "SET DEBUG=src:* && node ./dist/app.js",
+    "build": "rimraf dist/ && tsc && cpy views/*.* dist/ --parents && cpy public/**/*.* dist/ --parents",
+    "postinstall": "typings install"
+  },
+  "dependencies": {
+    "body-parser": "~1.15.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "express": "~4.13.4",
+    "jade": "~1.11.0",
+    "morgan": "~1.7.0",
+    "serve-favicon": "~2.3.0"
+  },
+  "devDependencies": {
+    "cpy-cli": "^1.0.1",
+    "rimraf": "^2.5.2",
+    "typescript": "^1.8.10",
+    "typings": "^1.3.1"
+  }
+}
