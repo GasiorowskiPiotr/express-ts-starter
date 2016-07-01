@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "SET DEBUG=src:* && node ./dist/app.js",
+    "start": "SET DEBUG=app:* && node ./dist/app.js",
     "build": "rimraf dist/ && tsc && cpy views/*.* dist/ --parents && cpy public/**/*.* dist/ --parents",
     "postinstall": "typings install"
   },

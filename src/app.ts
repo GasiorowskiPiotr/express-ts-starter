@@ -2,7 +2,7 @@ import app from './server';
 import * as debugFactory from 'debug';
 import * as http from 'http';
 
-let debug = debugFactory('src:server');
+let debug = debugFactory('app:server');
 
 let normalizePort = (val) => {
   var port = parseInt(val, 10);
