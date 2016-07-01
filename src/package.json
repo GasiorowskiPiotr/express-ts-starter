@@ -1,6 +1,6 @@
 {
-  "name": "src",
-  "version": "0.0.0",
+  "name": "express-ts-starter",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "SET DEBUG=src:* && node ./dist/app.js",
