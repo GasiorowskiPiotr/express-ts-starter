@@ -1,14 +1,18 @@
 {
   "name": "express-ts-starter",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "SET DEBUG=app:* && node ./dist/app.js",
+    "start-win": "SET DEBUG=app:* && node ./dist/app.js",
+    "start-linux": "DEBUG=app:* node ./dist/app.js",
     "build-dist": "rimraf dist/ && tsc && cpy views/*.* dist/ --parents && cpy public/**/*.* dist/ --parents",
     "devenv-win": "npm run watch-async-win & npm run supervise",
+    "devenv-linux": "npm run watch-async-linux & npm run supervise-linux",
     "postinstall": "typings install",
-    "supervise": "SET DEBUG=app:* && supervisor -w dist -e ts -x node ./dist/app.js",
-    "watch-async-win": "start \"watch-async\" /b tsc -w",
+    "supervise": "SET DEBUG=app:* && supervisor -w dist -x node ./dist/app.js",
+    "supervise-linux": "DEBUG=app:* supervisor -w dist -x node ./dist/app.js",
+    "watch-async-win": "start /b tsc -w",
+    "watch-async-linux": "tsc -w &",
     "stop-watch-win": "taskkill /FI \"IMAGENAME eq cmd.exe\" /F"
   },
   "dependencies": {
